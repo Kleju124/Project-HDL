@@ -20,13 +20,13 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module top (clk, onehertz);
+module top #(parameter value = 50000000)(clk, hz);
   input             clk;            // synthesis attribute PERIOD clk "50 MHz"
   reg        [25:0] count = 0;
-  output reg        onehertz = 0;   // one pulse per second
+  output reg        hz = 0; 
 
   always @ (posedge clk) begin
-    onehertz <= (count == 50000000 - 2);
-    count <= onehertz ? 0 : count + 1;
+    hz <= (count == value - 2);
+    count <= hz ? 0 : count + 1;
   end
 endmodule

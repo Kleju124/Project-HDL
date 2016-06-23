@@ -1,5 +1,5 @@
-Running: xsim.dir/test_behav/xsimk.exe -simmode gui -wdb test_behav.wdb -simrunnum 0 -socket 2501
+Running: xsim.dir/test_behav/xsimk.exe -simmode gui -wdb test_behav.wdb -simrunnum 0 -socket 1171
 Design successfully loaded
-Design Loading CPU Usage: 655 ms
+Design Loading CPU Usage: 671 ms
 Simulation completed
-Simulation CPU Usage: 126343 ms
+Simulation CPU Usage: 178843 ms

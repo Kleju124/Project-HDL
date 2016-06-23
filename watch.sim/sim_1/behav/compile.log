@@ -2,6 +2,9 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Dawid/Vivado/watch/watch.s
 INFO: [VRFC 10-311] analyzing module dec_cnt
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Dawid/Vivado/watch/watch.srcs/sources_1/new/top.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Dawid/Vivado/watch/watch.srcs/sources_1/new/multi_led.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multi_led
+WARNING: [VRFC 10-756] identifier select is used before its declaration [C:/Users/Dawid/Vivado/watch/watch.srcs/sources_1/new/multi_led.v:30]
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Dawid/Vivado/watch/watch.srcs/sim_1/new/test.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module test
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Dawid/Vivado/watch/watch.sim/sim_1/behav/glbl.v" into library xil_defaultlib

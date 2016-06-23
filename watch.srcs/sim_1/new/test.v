@@ -22,28 +22,40 @@
 
 module test(
     output reg gen_clk,
-    wire [3:0] s3,
-    wire [7:4] s4,
-    wire [11:8] m3,
-    wire [15:12] m4,
-    wire [19:16] h3,
-    wire [23:20] h4,
-    wire a
+    wire [3:0] s3, s4, m3, m4, h3, h4,
+//    wire a,
+    wire b 
 );
     
-      top CLK (
+/*    top #(50000000) CLK_1Hz (
         .clk(gen_clk),
-        .onehertz(a)
-    );
+        .hz(a)
+      );*/
+      top #(200000) CLK_250Hz (
+        .clk(gen_clk),
+        .hz(b)
+      );
+     
 
       dec_cnt UUT (
-        .clk(a),
+        //.clk(a),
+        .clk(gen_clk),
         .s1(s3),
         .s2(s4),
         .m1(m3),
         .m2(m4),
         .h1(h3),
         .h2(h4)        
+    );
+     
+    multi_led LED (
+        .clk(b),
+        .led1(s3),
+        .led2(s4),
+        .led3(m3),
+        .led4(m4),
+        .led5(h3),
+        .led6(h4)
     );
         
     initial

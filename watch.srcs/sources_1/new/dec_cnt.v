@@ -22,12 +22,13 @@
 
 module dec_cnt(
     input wire clk,
-    output reg [3:0] s1,
+    output reg [3:0] s1, s2, m1, m2, h1, h2,
+/*    output reg [3:0] s1,
     output reg [7:4] s2,
     output reg [11:8] m1,
     output reg [15:12] m2,
     output reg [19:16] h1,
-    output reg [23:20] h2,
+    output reg [23:20] h2, */
     reg [2:0] state   
     );
     
