@@ -61,7 +61,7 @@ module dec_cnt(
             else if(m2 == 4'b0110)
                 begin
                 state <= 3'b100;
-                m2 <= 4'd0;
+                m2 <= 4'b0000;
                 end
             else if(h1 == 4'b1001)
                 begin
