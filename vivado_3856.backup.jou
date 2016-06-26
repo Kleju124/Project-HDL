@@ -1,0 +1,29 @@
+#-----------------------------------------------------------
+# Vivado v2014.3.1 (64-bit)
+# SW Build 1056140 on Thu Oct 30 17:03:40 MDT 2014
+# IP Build 1028902 on Fri Sep 26 17:35:13 MDT 2014
+# Start of session at: Thu Jun 23 02:22:10 2016
+# Process ID: 5464
+# Log file: C:/Users/Dawid/Vivado/watch/vivado.log
+# Journal file: C:/Users/Dawid/Vivado/watch\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Dawid/Vivado/watch/watch.xpr
+set_property -name {xsim.simulate.runtime} -value {500ns} -objects [current_fileset -simset]
+launch_simulation
+source test.tcl
+close_sim
+launch_simulation
+launch_simulation
+source test.tcl
+set_property -name {xsim.simulate.runtime} -value {1ms} -objects [current_fileset -simset]
+close_sim
+launch_simulation
+source test.tcl
+set_property -name {xsim.simulate.runtime} -value {2ms} -objects [current_fileset -simset]
+close_sim
+launch_simulation
+source test.tcl
+close_sim
+launch_simulation
+source test.tcl

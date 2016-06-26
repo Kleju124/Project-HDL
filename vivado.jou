@@ -1,0 +1,33 @@
+#-----------------------------------------------------------
+# Vivado v2014.3.1 (64-bit)
+# SW Build 1056140 on Thu Oct 30 17:07:39 MDT 2014
+# IP Build 1028902 on Fri Sep 26 17:35:13 MDT 2014
+# Start of session at: Sun Jun 26 11:13:44 2016
+# Process ID: 3856
+# Log file: D:/watch/vivado.log
+# Journal file: D:/watch\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/watch/watch.xpr
+launch_simulation
+source test.tcl
+set_property top top [current_fileset]
+add_files -norecurse -scan_for_includes
+reorder_files -auto -disable_unused
+synth_design -rtl -name rtl_1
+close [ open D:/watch/watch.srcs/sources_1/new/main.v w ]
+add_files D:/watch/watch.srcs/sources_1/new/main.v
+set_property is_enabled true [get_files  D:/watch/watch.srcs/sources_1/new/dec_cnt.v]
+set_property is_enabled true [get_files  D:/watch/watch.srcs/sources_1/new/multi_led.v]
+remove_files D:/watch/watch.srcs/sources_1/new/main.v
+refresh_design
+close [ open D:/watch/watch.srcs/sources_1/new/mainx.v w ]
+add_files D:/watch/watch.srcs/sources_1/new/mainx.v
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top mainx [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+refresh_design
+refresh_design
+refresh_design

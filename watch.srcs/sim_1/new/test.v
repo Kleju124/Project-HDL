@@ -23,23 +23,23 @@
 module test(
     output reg gen_clk,
     wire [3:0] s3, s4, m3, m4, h3, h4,
-//    wire a,
+    wire a,
     wire b 
 );
     
-/*    top #(50000000) CLK_1Hz (
+    top #(1000000) CLK_1Hz (
         .clk(gen_clk),
         .hz(a)
-      );*/
-      top #(200000) CLK_250Hz (
+      );
+      top #(40000) CLK_250Hz (
         .clk(gen_clk),
         .hz(b)
       );
      
 
       dec_cnt UUT (
-        //.clk(a),
-        .clk(gen_clk),
+        .clk(a),
+        //.clk(gen_clk),
         .s1(s3),
         .s2(s4),
         .m1(m3),
@@ -63,5 +63,5 @@ module test(
      gen_clk <= 3'b000;
      end
 
-     always forever #10 gen_clk <= ~gen_clk;
+     always forever #500 gen_clk <= ~gen_clk;
 endmodule

@@ -1,0 +1,259 @@
+#-----------------------------------------------------------
+# Vivado v2014.3.1 (64-bit)
+# SW Build 1056140 on Thu Oct 30 17:07:39 MDT 2014
+# IP Build 1028902 on Fri Sep 26 17:35:13 MDT 2014
+# Start of session at: Sun Jun 26 11:13:44 2016
+# Process ID: 3856
+# Log file: D:/watch/vivado.log
+# Journal file: D:/watch\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/watch/watch.xpr
+INFO: [Project 1-313] Project file moved from 'C:/Users/Dawid/Vivado/watch' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'E:/Programy/Vivado/2014.3.1/data/ip'.
+open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:10 . Memory (MB): peak = 708.520 ; gain = 158.492
+launch_simulation
+INFO: [USF-XSim-27] Simulation object is 'sim_1'
+INFO: [USF-XSim-37] Inspecting design source files for 'test' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE' step in 'D:/watch/watch.sim/sim_1/behav'
+"xvlog -m64 -prj test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/watch/watch.srcs/sources_1/new/dec_cnt.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module dec_cnt
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/watch/watch.srcs/sources_1/new/top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/watch/watch.srcs/sources_1/new/multi_led.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module multi_led
+WARNING: [VRFC 10-756] identifier select is used before its declaration [D:/watch/watch.srcs/sources_1/new/multi_led.v:30]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/watch/watch.srcs/sim_1/new/test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module test
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/watch/watch.sim/sim_1/behav/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/watch/watch.sim/sim_1/behav'
+Vivado Simulator 2014.3
+Copyright 1986-1999, 2001-2014 Xilinx, Inc. All Rights Reserved.
+Running: E:/Programy/Vivado/2014.3.1/bin/unwrapped/win64.o/xelab.exe -wto 6ab6ebe421c6441380c1e69b722975c2 --debug typical --relax -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot test_behav xil_defaultlib.test xil_defaultlib.glbl -log elaborate.log 
+Multi-threading is on. Using 6 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.top(value=1000000)
+Compiling module xil_defaultlib.top(value=40000)
+Compiling module xil_defaultlib.dec_cnt
+Compiling module xil_defaultlib.multi_led
+Compiling module xil_defaultlib.test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot test_behav
+
+****** Webtalk v2014.3.1 (64-bit)
+  **** SW Build 1056140 on Thu Oct 30 17:07:39 MDT 2014
+  **** IP Build 1028902 on Fri Sep 26 17:35:13 MDT 2014
+    ** Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+
+source D:/watch/watch.sim/sim_1/behav/xsim.dir/test_behav/webtalk/xsim_webtalk.tcl -notrace
+webtalk_transmit: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 62.270 ; gain = 0.023
+
+    while executing
+"webtalk_transmit -clientid 866732316 -regid "211203076_0_0_004" -xml D:/watch/watch.sim/sim_1/behav/xsim.dir/test_behav/webtalk/usage_statistics_ext_x..."
+    (file "D:/watch/watch.sim/sim_1/behav/xsim.dir/test_behav/webtalk/xsim_webtalk.tcl" line 41)
+INFO: [Common 17-206] Exiting Webtalk at Sun Jun 26 11:14:44 2016...
+run_program: Time (s): cpu = 00:00:05 ; elapsed = 00:00:16 . Memory (MB): peak = 740.160 ; gain = 31.641
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/watch/watch.sim/sim_1/behav'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "test_behav -key {Behavioral:sim_1:Functional:test} -tclbatch {test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2014.3
+Time resolution is 1 ps
+source test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 10s
+run: Time (s): cpu = 00:01:16 ; elapsed = 00:13:46 . Memory (MB): peak = 752.883 ; gain = 12.723
+xsim: Time (s): cpu = 00:01:20 ; elapsed = 00:13:56 . Memory (MB): peak = 752.883 ; gain = 12.723
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 10s
+launch_simulation: Time (s): cpu = 00:01:26 ; elapsed = 00:14:18 . Memory (MB): peak = 752.883 ; gain = 44.363
+set_property top top [current_fileset]
+add_files -norecurse -scan_for_includes
+reorder_files -auto -disable_unused
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7z020clg484-3
+Top: top
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:02:26 ; elapsed = 00:20:13 . Memory (MB): peak = 773.746 ; gain = 614.590
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top' [D:/watch/watch.srcs/sources_1/new/top.v:23]
+	Parameter value bound to: 50000000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'top' (1#1) [D:/watch/watch.srcs/sources_1/new/top.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:02:29 ; elapsed = 00:20:18 . Memory (MB): peak = 808.730 ; gain = 649.574
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:02:29 ; elapsed = 00:20:19 . Memory (MB): peak = 808.730 ; gain = 649.574
+---------------------------------------------------------------------------------
+Loading clock regions from E:/Programy/Vivado/2014.3.1/data\parts/xilinx/zynq/zynq/xc7z020/ClockRegion.xml
+Loading clock buffers from E:/Programy/Vivado/2014.3.1/data\parts/xilinx/zynq/zynq/xc7z020/ClockBuffers.xml
+Loading clock placement rules from E:/Programy/Vivado/2014.3.1/data/parts/xilinx/zynq/ClockPlacerRules.xml
+Loading package pin functions from E:/Programy/Vivado/2014.3.1/data\parts/xilinx/zynq/PinFunctions.xml...
+Loading package from E:/Programy/Vivado/2014.3.1/data\parts/xilinx/zynq/zynq/xc7z020/clg484/Package.xml
+Loading io standards from E:/Programy/Vivado/2014.3.1/data\./parts/xilinx/zynq/IOStandards.xml
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:02:44 ; elapsed = 00:20:32 . Memory (MB): peak = 1251.980 ; gain = 1092.824
+4 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 1251.980 ; gain = 491.137
+close [ open D:/watch/watch.srcs/sources_1/new/main.v w ]
+add_files D:/watch/watch.srcs/sources_1/new/main.v
+set_property is_enabled true [get_files  D:/watch/watch.srcs/sources_1/new/dec_cnt.v]
+set_property is_enabled true [get_files  D:/watch/watch.srcs/sources_1/new/multi_led.v]
+remove_files D:/watch/watch.srcs/sources_1/new/main.v
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:03:27 ; elapsed = 00:30:29 . Memory (MB): peak = 1251.980 ; gain = 1092.824
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'top' [D:/watch/watch.srcs/sources_1/new/top.v:23]
+	Parameter value bound to: 50000000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'top' (1#1) [D:/watch/watch.srcs/sources_1/new/top.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:03:29 ; elapsed = 00:30:34 . Memory (MB): peak = 1258.242 ; gain = 1099.086
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:03:29 ; elapsed = 00:30:35 . Memory (MB): peak = 1258.242 ; gain = 1099.086
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+refresh_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:23 . Memory (MB): peak = 1259.270 ; gain = 7.289
+close [ open D:/watch/watch.srcs/sources_1/new/mainx.v w ]
+add_files D:/watch/watch.srcs/sources_1/new/mainx.v
+set_property top mainx [current_fileset]
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:03:58 ; elapsed = 00:36:04 . Memory (MB): peak = 1259.270 ; gain = 1100.113
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'mainx' [D:/watch/watch.srcs/sources_1/new/mainx.v:23]
+INFO: [Synth 8-256] done synthesizing module 'mainx' (1#1) [D:/watch/watch.srcs/sources_1/new/mainx.v:23]
+WARNING: [Synth 8-3330] design mainx has an empty top module
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:03:59 ; elapsed = 00:36:08 . Memory (MB): peak = 1259.270 ; gain = 1100.113
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:03:59 ; elapsed = 00:36:08 . Memory (MB): peak = 1259.270 ; gain = 1100.113
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+refresh_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:22 . Memory (MB): peak = 1259.270 ; gain = 0.000
+refresh_design
+ERROR: [Synth 8-2715] syntax error near ; [D:/watch/watch.srcs/sources_1/new/mainx.v:25]
+Failed to read verilog 'D:/watch/watch.srcs/sources_1/new/mainx.v'
+    while executing
+"rt::read_verilog {
+      D:/watch/watch.srcs/sources_1/new/top.v
+      D:/watch/watch.srcs/sources_1/new/dec_cnt.v
+      D:/watch/watch.srcs/sources_1..."
+    ("uplevel" body line 23)
+    invoked from within
+"uplevel #0 {
+    set ::env(BUILTIN_SYNTH) true
+    source $::env(HRT_TCL_PATH)/rtSynthPrep.tcl
+    rt::HARTNDb_resetJobStats
+    rt::HARTNDb_startJobS..."
+ERROR: [Common 17-39] 'refresh_design' failed due to earlier errors.
+refresh_design
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:04:18 ; elapsed = 00:37:29 . Memory (MB): peak = 1259.270 ; gain = 1100.113
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'mainx' [D:/watch/watch.srcs/sources_1/new/mainx.v:23]
+INFO: [Synth 8-638] synthesizing module 'top' [D:/watch/watch.srcs/sources_1/new/top.v:23]
+	Parameter value bound to: 1000000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'top' (1#1) [D:/watch/watch.srcs/sources_1/new/top.v:23]
+INFO: [Synth 8-638] synthesizing module 'top__parameterized0' [D:/watch/watch.srcs/sources_1/new/top.v:23]
+	Parameter value bound to: 40000 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'top__parameterized0' (1#1) [D:/watch/watch.srcs/sources_1/new/top.v:23]
+INFO: [Synth 8-638] synthesizing module 'dec_cnt' [D:/watch/watch.srcs/sources_1/new/dec_cnt.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/watch/watch.srcs/sources_1/new/dec_cnt.v:81]
+INFO: [Synth 8-256] done synthesizing module 'dec_cnt' (2#1) [D:/watch/watch.srcs/sources_1/new/dec_cnt.v:23]
+WARNING: [Synth 8-350] instance 'UUT' of module 'dec_cnt' requires 8 connections, but only 7 given [D:/watch/watch.srcs/sources_1/new/mainx.v:44]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [D:/watch/watch.srcs/sources_1/new/mainx.v:55]
+INFO: [Synth 8-638] synthesizing module 'multi_led' [D:/watch/watch.srcs/sources_1/new/multi_led.v:23]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/watch/watch.srcs/sources_1/new/multi_led.v:38]
+INFO: [Synth 8-226] default block is never used [D:/watch/watch.srcs/sources_1/new/multi_led.v:101]
+INFO: [Synth 8-256] done synthesizing module 'multi_led' (3#1) [D:/watch/watch.srcs/sources_1/new/multi_led.v:23]
+WARNING: [Synth 8-350] instance 'LED' of module 'multi_led' requires 20 connections, but only 7 given [D:/watch/watch.srcs/sources_1/new/mainx.v:55]
+INFO: [Synth 8-256] done synthesizing module 'mainx' (4#1) [D:/watch/watch.srcs/sources_1/new/mainx.v:23]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:04:19 ; elapsed = 00:37:33 . Memory (MB): peak = 1259.270 ; gain = 1100.113
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:04:19 ; elapsed = 00:37:34 . Memory (MB): peak = 1259.270 ; gain = 1100.113
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+refresh_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:24 . Memory (MB): peak = 1263.145 ; gain = 3.875
